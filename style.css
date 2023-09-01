@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 16px;
+    gap: 16px;
+}
+
+.item{
+    height: 150px;
+    width: 80%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 32px;
+}
+
+.texto{
+    color: white;
+    font-size: 64px;
+}
+
+.forma{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.branco{
+    background-color: white;
+}
+
+
+.circulo{
+    border-radius: 50%;
+}
+
+.trapezio{
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+
+.girando {
+    animation: rotate 3s linear infinite; 
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}   
+
+.pulando {
+    animation: jump 0.5s ease-in-out;
+}
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    25% {
+        transform: translateY(-30px); 
+    }
+    75% {
+        transform: translateY(30px); 
+    }
+}
+.girando-vertical {
+    animation: rotateVertical 1s linear infinite; 
+}
+
+@keyframes rotateVertical {
+    0% {
+        transform: rotateY(0deg); 
+    }
+    100% {
+        transform: rotateY(360deg); 
+    }
+}
+.invisivel {
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+.pulsando {
+    animation: pulse 1s ease-in-out infinite; 
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
